@@ -1,0 +1,106 @@
+2 Bay Area BikeShare
+Webseite
+http://www.bayareabikeshare.com/open-data
+Description
+Here you'll find Bay Area Bike Share's trip data for public use. So whether you're a designer, developer, or just plain curious, feel free to download it and bring it to life!
+Each trip is anonymized and includes:
+o	Bike number
+o	Trip start day and time
+o	Trip end day and time
+o	Trip start station
+o	Trip end station
+o	Rider type – Annual or Casual (24-hour or 3-day member)
+o	If an annual member trip, it will also include the member’s home zip code
+The data set also includes:
+o	Weather information per day per service area
+o	Bike and dock availability per minute per station 
+Kontakt
+Data@bayareabikeshare.com
+Zeitraum
+August 2013 - August 2016
+Datenformat
+Json
+Benuzterverpflichtung
+none - Open Data
+Verfügbar unter
+Webseite
+http://www.bayareabikeshare.com/open-data
+
+Lizenz
+?????
+Publication Date
+??????
+
+
+ 
+@prefix idsv: <http://industrialdataspace.org/2016/10/idsv/core#> .
+@prefix idsv_top: <http://industrialdataspace.org/2016/10/idsv/topics#> .
+@prefix idsv_std: <http://industrialdataspace.org/2016/10/idsv/standards#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+# Data Origin and Basic Metadata  
+BA:bs a idsv:PublishedDataset;
+  idsv:title " Bay Area BikeShare"@en;
+  idsv:createdBy <http://www.bayareabikeshare.com/open-data />;
+  idsv:contact < http://www.bayareabikeshare.com/open-data />.
+
+
+
+# Legal information and Acess Control
+
+BA:bs idsv:policy [
+  a odrl:Offer;
+  odrl:permission [
+    a odrl:Permission ;
+    odrl:action odrl:read ;
+  ];
+].
+
+
+# Temporal Coverage
+BA:bs idsv:coversTemporal [
+  a time:Interval;
+  time:hasBeginning [
+    a time:Instance;
+    time:inXSDDateTime "2013-08-01T00:00:00-1:00"^^xsd:dateTime
+  ];
+  time:hasEnd [
+    a time:Instance;
+    time:inXSDDateTime "2013-08-01T24:00:00-1:00"^^xsd:dateTime
+  ]
+].
+
+
+# Spatial Coverage
+# unknown
+
+# Data Quality
+# unknown
+
+# Frequency
+# unknown
+
+# Data Format
+BA:bs idsv:mediaType <http://www.iana.org/assignments/media-types/text/csv>.
+
+# Size
+# unknown
+
+
+# Data Source
+BA:bs idsv:accessURL
+<https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FIE0S4> .
